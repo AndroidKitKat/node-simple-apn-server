@@ -3,10 +3,12 @@ const util = require('util');
 const app = express();
 const fs = require('fs');
 const bodyparser = require('body-parser');
+const morgan = require('morgan')
 
 const port = 4000;
 
 app.use(express.json());
+app.use(morgan('combined'));
 
 app.post('/token', (req, res) => {
   // open token file 
