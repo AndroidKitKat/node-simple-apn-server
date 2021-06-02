@@ -38,7 +38,7 @@ app.post('/token', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.send(`If you're reading this, shit's working...`);
+  res.send(`If you're reading this, something's working...`);
 })
 
 app.listen(port, () => {
