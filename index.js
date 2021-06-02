@@ -2,7 +2,6 @@ const express = require('express');
 const util = require('util');
 const app = express();
 const fs = require('fs');
-const bodyparser = require('body-parser');
 const morgan = require('morgan')
 
 const port = 4000;
