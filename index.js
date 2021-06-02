@@ -37,6 +37,10 @@ app.post('/token', (req, res) => {
   });
 });
 
+app.get('/', (req, res) => {
+  res.send(`If you're reading this, shit's working...`);
+})
+
 app.listen(port, () => {
   console.log(`Listening on https://localhost:${port}`);
 })
