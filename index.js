@@ -79,14 +79,11 @@ var logUnsent = (event, timestamp) => {
       devices[token] = unsent
     })
     // here i should remove dupes... ?
-    devices.forEach((unread) => {
-      console.log(unread)
-    })
+    console.log(devices)
     fs.writeFile('unsent.json', JSON.stringify(devices), 'utf-8', (err, data) => {
       if (err) {
         throw err
       }
-      console.log(devices)
     })
   })
 }
