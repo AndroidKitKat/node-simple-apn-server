@@ -49,7 +49,7 @@ var getTimeString = (timestamp) => {
   let date = new Date()
   date.setTime(timestamp)
   console.log(date)
-  return `${date.getHours()}:${date.getMinutes()} - ${date.toDateString()}`
+  return `${date.toLocaleTimeString()} - ${date.toDateString()}`
 }
 
 var logUnsent = (event, timestamp) => {
