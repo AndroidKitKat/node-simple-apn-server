@@ -53,6 +53,7 @@ var getTimeString = (timestamp) => {
 }
 
 var logUnsent = (event, timestamp) => {
+  console.log(`logUnsent: ${event}`)
   fs.readFile('unsent.json', 'utf-8', (err, data) => {
     if (err) {
       throw err
