@@ -134,6 +134,7 @@ app.post('/event', (req, res) => {
     return
   }
   console.log(body)
+  console.log(`deviceTokens: ${deviceTokens.length}`)
   switch (body.event) {
     case "opened":
       // put the safe into the open position
@@ -215,6 +216,7 @@ app.post('/fetch', (req, res) => {
    } else {
      responseObject['events'] = []
    }
+   console.log(JSON.stringify(responseObject))
    res.send(JSON.stringify(responseObject))
  })
 });
