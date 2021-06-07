@@ -204,6 +204,7 @@ app.post('/fetch', (req, res) => {
    }
    let unsent = devices[body.token]
    if (unsent) {
+     console.log("unset was set")
     //  responseObject['events'] = [unsent.length]
     responseObject['events'] = unsent
     // remove the token from the unsent now
@@ -214,6 +215,7 @@ app.post('/fetch', (req, res) => {
       }
     })
    } else {
+     console.log("unset was not set")
      responseObject['events'] = []
    }
    console.log(JSON.stringify(responseObject))
