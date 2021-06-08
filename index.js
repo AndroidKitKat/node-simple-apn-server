@@ -138,6 +138,7 @@ app.post('/event', (req, res) => {
   console.log(body)
   console.log(`deviceTokens: ${deviceTokens.length}`)
   console.log(`--------_____------- EVENT CALLED -----___----___`)
+  console.log(deviceTokens)
   switch (body.event) {
     case "opened":
       // put the safe into the open position
