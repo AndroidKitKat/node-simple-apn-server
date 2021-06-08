@@ -40,6 +40,7 @@ var sendNotif = (token, event, message, badge) => {
   notif.title = `Safe ${event}!`;
   notif.body = `${message}`;
   notif.topic = process.env.APN_BUNDLEID;
+  console.log(notif)
   apnProvider.send(notif, token).then((result) => {
     console.log(result)
     console.log(`Message sent to ${token}`);
