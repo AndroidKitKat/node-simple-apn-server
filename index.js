@@ -137,25 +137,24 @@ app.post('/event', (req, res) => {
   }
   console.log(body)
   console.log(`deviceTokens: ${deviceTokens.length}`)
+  console.log(`--------_____------- EVENT CALLED -----___----___`)
   switch (body.event) {
     case "opened":
       // put the safe into the open position
-      safe.state = "opened";
+      // safe.state = "opened";
       deviceTokens.forEach((token) => {
         sendNotif(token, "opened", `${getTimeString(body.timestamp)}`, 1);
       })
-      console.log('safe opened');
       break;
 
     case "closed":
       // put the safe into the close position
-      safe.state = "closed";
-      safe.time = 0;
+      // safe.state = "closed";
+      // safe.time = 0;
       deviceTokens.forEach((token) => {
         console.log(body);
         sendNotif(token, "closed", `${getTimeString(body.timestamp)}`, 1);
       })
-      console.log('safe closed');
       break;
     
     case "critical":
