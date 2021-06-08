@@ -139,6 +139,7 @@ app.post('/event', (req, res) => {
   console.log(`deviceTokens: ${deviceTokens.length}`)
   console.log(`--------_____------- EVENT CALLED -----___----___`)
   console.log(deviceTokens)
+  deviceTokens = [...new Set(deviceTokens)]
   switch (body.event) {
     case "opened":
       // put the safe into the open position
@@ -260,6 +261,7 @@ app.listen(port, () => {
       tokens = [];
     }
     deviceTokens = tokens;
+
     console.log(`Tokens listening: ${deviceTokens.length}`)
   });
   console.log(`Listening on https://localhost:${port}`);
